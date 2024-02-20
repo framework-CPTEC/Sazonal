@@ -26,23 +26,23 @@ sub = SUB.model()
 
 ## Pedido
 
-- Data  
+# Data  
 date= '20240214'
 
-- Variaveis 
+# Variaveis 
 var = 'prec'
 
 Lista de variáveis disponíveis:
--- prec -> precipitação
--- t2mt -> temperatura de 2 metros
--- psnm -> pressão ao nível do mar
-* função -> radiação de onda longa de saída
-* tp85 -> temperatura a 850 hPa
-* gz50 -> altura geopotencial em 500 hPa
-uv85 -> vento zonal a 850 hPa
-uv20 -> vento zonal a 200 hPa
-vv85 -> vento meridional a 850 hPa
-vv20 -> vento meridional a 200 hPa
+- prec -> precipitação
+- t2mt -> temperatura de 2 metros
+- psnm -> pressão ao nível do mar
+- função -> radiação de onda longa de saída
+- tp85 -> temperatura a 850 hPa
+- gz50 -> altura geopotencial em 500 hPa
+- uv85 -> vento zonal a 850 hPa
+- uv20 -> vento zonal a 200 hPa
+- vv85 -> vento meridional a 850 hPa
+- vv20 -> vento meridional a 200 hPa
 
 Arquivos de dados de previsão calibrados são gerados para valores totais de temperatura e precipitação de 2 metros, probabilidade do tercil mais provável, probabilidade de anomalia positiva e anomalias.
 
