@@ -46,40 +46,40 @@ Lista de variáveis disponíveis:
 
 Arquivos de dados de previsão calibrados são gerados para valores totais de temperatura e precipitação de 2 metros, probabilidade do tercil mais provável, probabilidade de anomalia positiva e anomalias.
 
-prec_ca -> precipitação calibrada
-t2mt_ca -> temperatura de 2 metros calibrada
+- prec_ca -> precipitação calibrada
+- t2mt_ca -> temperatura de 2 metros calibrada
 
 
-- Produto
+### Produto
 product = 'week'
 
 Lista de produtos disponíveis:
-week -> média ou acúmulo semanal (7 dias), para as semanas 01, 02, 03 e 04
-fort -> média ou acúmulo quinzenal (14 dias), para as quinzenas 01 e 02
-3wks -> média de 21 dias ou acumulação
-mnth -> média ou acúmulo de 30 dias
+- week -> média ou acúmulo semanal (7 dias), para as semanas 01, 02, 03 e 04
+- fort -> média ou acúmulo quinzenal (14 dias), para as quinzenas 01 e 02
+- 3wks -> média de 21 dias ou acumulação
+- mnth -> média ou acúmulo de 30 dias
 
 
-- Campo
+### Campo
 field='anomalies'
 
 Lista de campos calibrados determinísticos e probabilísticos disponíveis:
-anomalies -> anomalias de previsão
-prob_positive_anomaly  -> probabilidade de previsão de anomalia positiva
-prob_terciles -> probabilidade de previsão do tercil mais provável
-totals -> valor total previsto
+- anomalies -> anomalias de previsão
+- prob_positive_anomaly  -> probabilidade de previsão de anomalia positiva
+- prob_terciles -> probabilidade de previsão do tercil mais provável
+- totals -> valor total previsto
 
 
-- Steps = Número da figura disponível por produto.
+### Steps = Número da figura disponível por produto.
 
 step = '01'
-week -> dado por semana (01, 02, 03 e 04)
-fort -> dado por quinzena (14 dias), para as quinzenas (01 e 02)
-3wks -> dado médio de 21 dias ou acumulação (01)
-mnth -> dado médio ou acúmulo de 30 dias (01)
+- week -> dado por semana (01, 02, 03 e 04)
+- fort -> dado por quinzena (14 dias), para as quinzenas (01 e 02)
+- 3wks -> dado médio de 21 dias ou acumulação (01)
+- mnth -> dado médio ou acúmulo de 30 dias (01)
 
 
-Exemplo de solicitação do Pedido
+### Exemplo de solicitação do Pedido
 f = sub.load(date='20240207', var='prec', step='01', product='week',field='anomalies')
 
 
