@@ -33,12 +33,12 @@ date= '20240214'
 var = 'prec'
 
 Lista de variáveis disponíveis:
-prec -> precipitação
-t2mt -> temperatura de 2 metros
-psnm -> pressão ao nível do mar
-função -> radiação de onda longa de saída
-tp85 -> temperatura a 850 hPa
-gz50 -> altura geopotencial em 500 hPa
+-- prec -> precipitação
+-- t2mt -> temperatura de 2 metros
+-- psnm -> pressão ao nível do mar
+* função -> radiação de onda longa de saída
+* tp85 -> temperatura a 850 hPa
+* gz50 -> altura geopotencial em 500 hPa
 uv85 -> vento zonal a 850 hPa
 uv20 -> vento zonal a 200 hPa
 vv85 -> vento meridional a 850 hPa
