@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'cptec-model'
+project = 'cptec-sazonal'
 copyright = '2023, Framework CPTEC'
 author = 'Framework CPTEC'
 
