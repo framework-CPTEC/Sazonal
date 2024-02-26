@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Sazonal'
+copyright = '2024, FrameWork CPTEC'
+author = 'FrameWork CPTEC'
 
 release = '0.1'
 version = '0.1.0'
