@@ -1,5 +1,5 @@
 """
-Lumache - Python library for cooks and food lovers.
+Sazonal - Biblioteca Python para a distibuição de Dados dos Modelos Numéricos.
 """
 
 __version__ = "0.1.0"
