@@ -65,6 +65,6 @@ Recuperar Dados de Modelos Numéricos
 
   quit()
 
-Download :download:`get_data_oper.py <examples/get_data_oper.py>`.
+Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
 
 
