@@ -18,13 +18,13 @@ sub = SUB.model()
 Pedido
 ------
 
-.. warning::
-  Alterar a data para os valores exibidos na inicialização
-
 Data
 ----
 
 date= '20240214'
+
+.. warning::
+  Alterar a data para os valores exibidos na inicialização
 
 Variaveis
 ---------
