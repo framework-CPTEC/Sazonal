@@ -35,8 +35,8 @@ Exemplos Python
   
   
 
-Recuperar Dados de Modelos Numéricos
-------------------------------------
+Recuperar Dados do Modelos Numérico SubSazonal
+----------------------------------------------
 .. code-block:: console
 
   # Importa a ferramenta
@@ -63,8 +63,101 @@ Recuperar Dados de Modelos Numéricos
   # Requisição dos dados
   f = sub.load(date=date, var=var, step=step, product=product ,field=field)
 
+  # Retorna um Xarray
+  print(f)
+  # <xarray.Dataset> Size: 300kB
+  # Dimensions:  (time: 1, lat: 192, lon: 384)
+  # Coordinates:
+  #  * lat      (lat) float64 2kB -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
+  #  * lon      (lon) float64 3kB 0.0 0.9399 1.88 2.82 ... 357.2 358.1 359.1 360.0
+  #  * time     (time) datetime64[ns] 8B 2023-01-04
+  # Data variables:
+  #    prec     (time, lat, lon) float32 295kB -0.02726 -0.0294 ... 0.9935 0.9946
+  # Attributes:
+  #    center:   National Institute for Space Research - INPE
+  #    model:    The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid)
+
   quit()
 
 Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
+
+
+Recuperar Dados e Salvar em NetCDF
+-------------------------------
+
+Instalar Pacote NetCDF
+
+pip install NetCDF4
+
+.. code-block:: console
+
+  # Importa a ferramenta
+  import subsaz.CPTEC_SUB as SUB
+  
+  # Inicializa o construtor
+  sub = SUB.model()
+
+  # Data Condição Inicial (IC)
+  date = '20230104'
+
+  # variavel
+  var = 'prec'
+
+  # produto
+  product = 'week'
+
+  # campo
+  field = 'anomalies'
+
+  # passo depende do produto escolhido
+  step = '01'
+
+  # Requisição dos dados
+  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+
+  # Salvar XArray em NetCDF
+  f.to_netcdf('sub_202301104.nc')
+
+  quit()
+
+Recuperar Dados e Plotar Figura
+-------------------------------
+
+Instalar o pacote MatPlotLib
+pip install matplotlib
+
+.. code-block:: console
+
+  # Importa a ferramenta
+  import subsaz.CPTEC_SUB as SUB
+  import matplotlib.pyplot as plt
+
+  # Inicializa o construtor
+  sub = SUB.model()
+
+  # Data Condição Inicial (IC)
+  date = '20230104'
+
+  # variavel
+  var = 'prec'
+
+  # produto
+  product = 'week'
+
+  # campo
+  field = 'anomalies'
+
+  # passo depende do produto escolhido
+  step = '01'
+
+  # Requisição dos dados
+  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+
+  # Plotar a figura com a variavel prec
+  f.prec.plot()
+  plt.show()
+
+  quit()
+
 
 
