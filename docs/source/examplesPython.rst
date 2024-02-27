@@ -3,6 +3,7 @@ Exemplos Python
 
 .. warning::
    Alterar para os valores exibidos na inicialização.
+
    Inicialização comando:
    sub = SUB.model()
 
@@ -10,7 +11,8 @@ Exemplos Python
 .. note::
    #### The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid) #####
    
-   Forecast data available for reading.
+   **Forecast data available for reading.**
+
    2023-01-04 - 2023-01-11 - 2023-01-18 - 2023-01-25 - 2023-02-01
    2023-02-08 - 2023-02-15 - 2023-02-22 - 2023-03-01 - 2023-03-08
    2023-03-15 - 2023-03-22 - 2023-03-29 - 2023-04-05 - 2023-04-12
@@ -24,12 +26,12 @@ Exemplos Python
    2023-12-20 - 2023-12-27 - 2024-01-03 - 2024-01-10 - 2024-01-17
    2024-01-24 - 2024-01-31 - 2024-02-07 - 2024-02-14 - 2024-02-21
    
-   Variables: {'prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85',
+   **Variables:** {'prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85',
    'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 'cr20'}
    
-   Products: {'week', 'fort', '3wks', 'mnth'}
+   **Products:** {'week', 'fort', '3wks', 'mnth'}
   
-   Field: {'anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals'}
+   **Field:** {'anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals'}
   
   
 
