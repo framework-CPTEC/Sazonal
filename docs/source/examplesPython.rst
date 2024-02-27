@@ -87,7 +87,8 @@ Recuperar Dados e Salvar em NetCDF
 
 Instalar Pacote NetCDF
 
-pip install NetCDF4
+.. code-block:: console
+   pip install NetCDF4
 
 .. code-block:: console
 
@@ -124,7 +125,9 @@ Recuperar Dados e Plotar Figura
 -------------------------------
 
 Instalar o pacote MatPlotLib
-pip install matplotlib
+
+.. code-block:: console
+   pip install matplotlib
 
 .. code-block:: console
 
