@@ -66,8 +66,3 @@ Recuperar Dados de Modelos Numéricos
 Download :download:`get_data_oper.py <examples/get_data_oper.py>`.
 
 
-
-  quit()
-
-
-Download :download:`plot_figure.py <examples/plot_figure.py>`.
