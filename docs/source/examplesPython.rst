@@ -121,6 +121,8 @@ Instalar Pacote NetCDF
 
   quit()
 
+Download :download:`get_sub_netcdf.py <examples/get_sub_netcdf.py>`.
+
 Recuperar Dados e Plotar Figura
 -------------------------------
 
@@ -162,5 +164,5 @@ Instalar o pacote MatPlotLib
 
   quit()
 
-
+Download :download:`plot_sub_figure.py <examples/plot_sub_figure.py>`.
 
