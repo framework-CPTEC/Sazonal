@@ -1,9 +1,9 @@
-CPTEC-MODEL Documentação
+CPTEC-SAZONAL Documentação
 ========================
 
-**Framework-CPTEC** -  É um pacote in Python para a distribuição de dados brutos dos Modelos Numéricos de forma segmentada/particionada. Com esse pacote o usuário não necessita fazer o Download de todo o volume bruto. O pacote auxilia a manipular somente a sua necessidade.
+É um pacote in Python para a distribuição de dados brutos de previsão subsazonal do CPTEC/INPE  produzidos com o modelo BAM-1.2. Os arquivos de dados contêm a média do conjunto (de 11 membros) para todos os produtos e variáveis mostradas no site https://subsazonal.cptec.inpe.br/.
 
-
+Esses arquivos estão disponíveis como anomalias computadas referentes à climatologia 1999-2018.
 
 .. note::
 
