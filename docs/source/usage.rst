@@ -4,7 +4,7 @@ Como Usar
 Import
 ------
 
-import CPTEC_SUB as SUB
+import subsaz.CPTEC_SUB as SUB
 
 Inicialização
 -------------
