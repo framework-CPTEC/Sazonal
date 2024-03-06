@@ -211,8 +211,10 @@ Download :download:`plot_sub_filter.py <examples/prec_sub_filter.py>`.
   
 .. note::
    Para filtrar somente os dados do Brasil existe uma configuração padrão. Utilizar somente
-o comando: 
+   o comando: 
    sub.dict['area']['reduce'] = True    
+
+|pic1|
 
 .. |pic2| image:: _static/pic2.png
    :width: 80%
