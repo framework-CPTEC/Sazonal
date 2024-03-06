@@ -85,13 +85,6 @@ Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
 Recuperar Dados e Salvar em NetCDF
 -------------------------------
 
-Instalar Pacote NetCDF
-
-.. code-block:: console
-
-  pip install NetCDF4
-
-
 .. code-block:: console
 
   # Importa a ferramenta
@@ -128,13 +121,6 @@ Download :download:`get_sub_netcdf.py <examples/get_sub_netcdf.py>`.
 Recuperar Dados e Plotar Figura
 -------------------------------
 
-Instalar o pacote MatPlotLib
-
-.. code-block:: console
-
-   pip install matplotlib
-
-
 .. code-block:: console
 
   # Importa a ferramenta
@@ -169,4 +155,65 @@ Instalar o pacote MatPlotLib
   quit()
 
 Download :download:`plot_sub_figure.py <examples/plot_sub_figure.py>`.
+
+Recuperar Dados com recorte de area
+-----------------------------------
+
+.. code-block:: console
+
+  # Importa a ferramenta
+  import subsaz.CPTEC_SUB as SUB
+  
+  # Inicializa o construtor
+  sub = SUB.model()
+
+  # Data Condição Inicial (IC)
+  date = '20230104'
+
+  # variavel
+  var = 'prec'
+
+  # produto
+  product = 'week'
+
+  # campo
+  field = 'anomalies'
+
+  # passo depende do produto escolhido
+  step = '01'
+
+  # filtrar area do Brasil
+  # valores default:  
+  #   "minlat" :    -45,
+  #   "maxlat" :     10,
+  #   "minlon" :    277,
+  #   "maxlon" :    332,  
+  sub.dict['area']['reduce'] = True
+
+  # Requisição dos dados
+  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+
+  # Retorna um Xarray
+  print(f)
+  # <xarray.Dataset> Size: 15kB
+  # Dimensions:  (time: 1, lat: 59, lon: 59)
+  # Coordinates:
+  # * lat      (lat) float64 472B -44.42 -43.48 -42.55 ... 7.948 8.883 9.818
+  # * lon      (lon) float64 472B 277.3 278.2 279.2 280.1 ... 329.9 330.9 331.8
+  # * time     (time) datetime64[ns] 8B 2023-01-04
+  # Data variables:
+  #  prec     (time, lat, lon) float32 14kB -0.7608 -0.4998 ... 0.01042 0.01279
+  # Attributes:
+  #  center:   National Institute for Space Research - INPE
+  #  model:    The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid)
+
+
+
+  quit()
+
+
+
+
+
+
 
