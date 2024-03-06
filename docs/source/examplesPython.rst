@@ -206,7 +206,7 @@ Recuperar Dados com recorte de area
 .. |pic1| image:: _static/pic1.png
    :width: 80%
 
-Download :download:`plot_sub_filter.py <examples/plot_sub_filter.py>`.
+Download :download:`plot_sub_filter.py <examples/prec_sub_filter.py>`.
 
   
 .. note::
