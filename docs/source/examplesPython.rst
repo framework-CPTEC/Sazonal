@@ -201,7 +201,10 @@ Recuperar Dados com recorte de area
    plt.show()
 
 
+|pic1|
 
+.. |pic1| image:: _static/pic1.png
+   :width: 80%
 
 
 
