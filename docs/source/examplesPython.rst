@@ -161,55 +161,44 @@ Recuperar Dados com recorte de area
 
 .. code-block:: console
 
-  # Importa a ferramenta
-  import subsaz.CPTEC_SUB as SUB
-  
-  # Inicializa o construtor
-  sub = SUB.model()
-
-  # Data Condição Inicial (IC)
-  date = '20230104'
-
-  # variavel
-  var = 'prec'
-
-  # produto
-  product = 'week'
-
-  # campo
-  field = 'anomalies'
-
-  # passo depende do produto escolhido
-  step = '01'
-
-  # filtrar area do Brasil
-  # valores default:  
-  #   "minlat" :    -45,
-  #   "maxlat" :     10,
-  #   "minlon" :    277,
-  #   "maxlon" :    332,  
-  sub.dict['area']['reduce'] = True
-
-  # Requisição dos dados
-  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
-
-  # Retorna um Xarray
-  print(f)
-  # <xarray.Dataset> Size: 15kB
-  # Dimensions:  (time: 1, lat: 59, lon: 59)
-  # Coordinates:
-  # * lat      (lat) float64 472B -44.42 -43.48 -42.55 ... 7.948 8.883 9.818
-  # * lon      (lon) float64 472B 277.3 278.2 279.2 280.1 ... 329.9 330.9 331.8
-  # * time     (time) datetime64[ns] 8B 2023-01-04
-  # Data variables:
-  #  prec     (time, lat, lon) float32 14kB -0.7608 -0.4998 ... 0.01042 0.01279
-  # Attributes:
-  #  center:   National Institute for Space Research - INPE
-  #  model:    The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid)
+   pip install cartopy
 
 
+.. code-block:: console
 
-  quit()
+   import subsaz.CPTEC_SUB as SUB
+   import matplotlib.pyplot as plt
+   import cartopy.crs as ccrs
+   import cartopy.feature as cfeature
+
+   # Inicializa o construtor
+   sub = SUB.model()
+   # Filtrar area definida
+   sub.dict['area']['reduce'] = True 
+   sub.dict['area']['minlat'] = -34.44
+   sub.dict['area']['maxlat'] = -21.43
+   sub.dict['area']['minlon'] = 301.14
+   sub.dict['area']['maxlon'] = 320.57
+   # Requisição dos dados
+   f = sub.load(date='20230104', var='prec', step='01', product='week' ,field='anomalies')
+   # Definir tamanho da figura
+   fig = plt.figure(figsize=(10,8))
+   # Setar figura unica
+   ax = fig.add_subplot(111, projection=ccrs.PlateCarree())
+   # Colocar  Linhas de Borda dos paises e linhas costeiras
+   ax.add_feature(cfeature.COASTLINE,color='grey')
+   ax.add_feature(cfeature.BORDERS,color='grey')
+   # Definir Regiao do Brasil
+   ax.set_extent([-90,-30,10,-41], ccrs.PlateCarree())
+   # Setar estados do Brasil
+   states = cfeature.NaturalEarthFeature(category='cultural',
+                                            name='admin_1_states_provinces_lines',
+                                            scale='50m', facecolor='none')
+   # Colocar Estados Brasil
+   ax.add_feature(states, edgecolor='gray')
+   # Plotar variavel
+   f.prec.plot()
+   plt.show()
 
 
 
