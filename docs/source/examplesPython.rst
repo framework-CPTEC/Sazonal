@@ -214,7 +214,7 @@ Download :download:`plot_sub_filter.py <examples/prec_sub_filter.py>`.
    o comando: 
    sub.dict['area']['reduce'] = True    
 
-|pic1|
+|pic2|
 
 .. |pic2| image:: _static/pic2.png
    :width: 80%
