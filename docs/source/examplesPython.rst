@@ -156,7 +156,7 @@ Recuperar Dados e Plotar Figura
 
 Download :download:`plot_sub_figure.py <examples/plot_sub_figure.py>`.
 
-Recuperar Dados com recorte de area
+Recuperar Dados com recorte de área
 -----------------------------------
 
 .. code-block:: console
