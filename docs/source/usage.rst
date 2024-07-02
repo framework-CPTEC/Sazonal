@@ -28,15 +28,17 @@ date= '20240214'
 
 Variaveis
 ---------
-
-var = 'prec'
+Uma única variável
+var = ['prec']
+Lista de variáveis
+var = ['prec','t2mt']
 
 **Lista de variáveis disponíveis:**
 
 - prec -> precipitação
 - t2mt -> temperatura de 2 metros
 - psnm -> pressão ao nível do mar
-- função -> radiação de onda longa de saída
+- role -> radiação de onda longa de saída
 - tp85 -> temperatura a 850 hPa
 - gz50 -> altura geopotencial em 500 hPa
 - uv85 -> vento zonal a 850 hPa
@@ -80,6 +82,7 @@ Steps = Número da figura disponível por produto.
 ------------------------------------------------
 
 step = '01'
+A opção pode ser omitida e trará todos os tempos do produto.
 
 - week -> dado por semana (01, 02, 03 e 04)
 - fort -> dado por quinzena (14 dias), para as quinzenas (01 e 02)
@@ -90,6 +93,6 @@ step = '01'
 Exemplo de solicitação do Pedido
 --------------------------------
 
-f = sub.load(date='20240207', var='prec', step='01', product='week',field='anomalies')
+f = sub.load(date='20240207', var='prec', product='week',field='anomalies')
 
 
