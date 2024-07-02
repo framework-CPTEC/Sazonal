@@ -29,9 +29,13 @@ date= '20240214'
 Variaveis
 ---------
 Uma única variável
+
 var = ['prec']
+
 Lista de variáveis
+
 var = ['prec','t2mt']
+
 
 **Lista de variáveis disponíveis:**
 
@@ -82,6 +86,7 @@ Steps = Número da figura disponível por produto.
 ------------------------------------------------
 
 step = '01'
+
 A opção pode ser omitida e trará todos os tempos do produto.
 
 - week -> dado por semana (01, 02, 03 e 04)
