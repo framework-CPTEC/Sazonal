@@ -5,20 +5,8 @@ O Grid Analysis and Display System – GrADS  (http://cola.gmu.edu/grads/) é um
 
 Utilizando o exemplo {ref}`Recuperar Dados e Salvar em NetCDF`. Recuperar Dados e Salvar em NetCDF um  arquivo NetCDF sera gerado no diretorio local de seu computador.
 
-Learn how to :ref:`link to a different section<Recuperar Dados e Salvar em NetCDF>`.
 
-
-Use : to create a target.
-
-Use :ref:`refname` to reference the target.
-
-Clicking on this internal hyperlink will take us to the target_ below.
-
-:ref:`reference-name`, this is
-:ref:`the same (cool) section <reference-name>`, and again the reference
-with support of the extension **autosectionlabel** --
-:ref:`concepts/referencing:A cool section` or :doc:`./referencing`.
-
+:doc:`my document <examplesPython>` 
 
 Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
 
@@ -28,7 +16,6 @@ Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para
 
 Após o  comando será gerado o arquivo.ctl na mesma pasta de trabalho.
 
-Learn how to :ref:`link to a different section<Cross-References to Locations in the Same Document>`.
 
 
 	
