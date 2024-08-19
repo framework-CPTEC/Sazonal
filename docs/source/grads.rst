@@ -3,12 +3,9 @@ NetCDF do GrADS
 
 O Grid Analysis and Display System – GrADS  (http://cola.gmu.edu/grads/) é uma ferramenta interativa utilizada para acessar, manipular e visualizar dados científicos. Ele trabalha com matrizes de dados nos formatos BINÁRIO, GRIB, NetCDF e HDF-SDS.
 
-Utilizando o exemplo {ref}`Recuperar Dados e Salvar em NetCDF`. Recuperar Dados e Salvar em NetCDF um  arquivo NetCDF sera gerado no diretorio local de seu computador.
+Recuperar Dados e Salvar um arquivo NetCDF utilizando o exemplo **Recuperar Dados e Salvar em NetCDF** em :doc:`Exemplos Python <examplesPython>`.
 
-
-:doc:`my document <examplesPython>` 
-
-Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
+Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geração do arquivo ctl com a saída do script do exemplo Recuperar Dados e Salvar em NetCDF.
 
 .. code-block:: console
 
