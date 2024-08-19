@@ -8,9 +8,9 @@ Utilizando o exemplo Recuperar Dados e Salvar em NetCDF um  arquivo NetCDF sera 
 Utilizar o Climate Data Operators
  (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
 
-Comando :
+.. code-block:: console
 
-cdo gradsdes arquivo.nc
+  cdo gradsdes arquivo.nc
 
 Apos o  comando sera gerado o arquivo.ctl na mesma pasta de trabalho.
 
