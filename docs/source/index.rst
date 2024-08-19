@@ -16,6 +16,7 @@ Contents
    /install
    /usage
    /examplesPython
+   /grads
 
 
 
