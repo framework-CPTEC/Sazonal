@@ -33,14 +33,7 @@ Learn how to :ref:`link to a different section<Cross-References to Locations in 
 
 	
 
-.. _reference-name:
 
-A cool section
-""""""""""""""
-
-.. _target:
-
-The hyperlink target above points to this paragraph.
 
 
 
