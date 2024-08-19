@@ -5,7 +5,7 @@ O Grid Analysis and Display System – GrADS  (http://cola.gmu.edu/grads/) é um
 
 Utilizando o exemplo {ref}`Recuperar Dados e Salvar em NetCDF`. Recuperar Dados e Salvar em NetCDF um  arquivo NetCDF sera gerado no diretorio local de seu computador.
 
-Learn how to :ref:`link to a different section<Cross-References to Locations in the Same Document>`.
+Learn how to :ref:`link to a different section<Recuperar Dados e Salvar em NetCDF>`.
 
 Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
 
