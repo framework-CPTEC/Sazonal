@@ -81,7 +81,14 @@ Recuperar Dados do Modelos Numérico SubSazonal
 
 Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
 
-.. _refname
+.. _reference-name:
+
+A cool section
+""""""""""""""
+
+.. _target:
+
+The hyperlink target above points to this paragraph.
 
 Recuperar Dados e Salvar em NetCDF
 -------------------------------
