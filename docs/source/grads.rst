@@ -7,6 +7,13 @@ Utilizando o exemplo {ref}`Recuperar Dados e Salvar em NetCDF`. Recuperar Dados 
 
 Learn how to :ref:`link to a different section<Recuperar Dados e Salvar em NetCDF>`.
 
+
+Use : to create a target.
+
+Use :ref:`refname` to reference the target.
+
+
+
 Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
 
 .. code-block:: console
