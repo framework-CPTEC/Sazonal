@@ -12,6 +12,12 @@ Use : to create a target.
 
 Use :ref:`refname` to reference the target.
 
+Clicking on this internal hyperlink will take us to the target_ below.
+
+:ref:`reference-name`, this is
+:ref:`the same (cool) section <reference-name>`, and again the reference
+with support of the extension **autosectionlabel** --
+:ref:`concepts/referencing:A cool section` or :doc:`./referencing`.
 
 
 Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para a geracao de um arquivo ctl para o GrADS.
