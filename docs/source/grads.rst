@@ -13,20 +13,9 @@ Utilizar o Climate Data Operators (https://code.mpimet.mpg.de/projects/cdo) para
 
 Após o  comando será gerado o arquivo.ctl na mesma pasta de trabalho.
 
-   .. tab:: reStructuredText
+Learn how to :ref:`link to a different section<Cross-References to Locations in the Same Document>`.
 
-      .. code-block:: rst
 
-         - :ref:`my target`.
-         - :ref:`Target to paragraph <target to paragraph>`.
-         - :ref:`Target inside a paragraph <in-line targets>`.
-
-   .. tab:: MyST (Markdown)
-
-      .. code-block:: md
-
-         - {ref}`my target`.
-         - {ref}`Target to paragraph <target_to_paragraph>`.
 
 
 
