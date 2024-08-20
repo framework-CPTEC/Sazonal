@@ -120,7 +120,7 @@ Recuperar Dados e Salvar em NetCDF
   f = sub.load(date=date, var=var, step=step, product=product ,field=field)
 
   # Salvar XArray em NetCDF
-  f.to_netcdf('sub_202301104.nc')
+  f.to_netcdf('arquivo.nc')
 
   quit()
 
