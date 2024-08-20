@@ -1,4 +1,4 @@
-NetCDF do GrADS
+NetCDF para o GrADS
 ===============
 
 O Grid Analysis and Display System – **GrADS** (http://cola.gmu.edu/grads/) é uma ferramenta interativa utilizada para acessar, manipular e visualizar dados científicos. Ele trabalha com matrizes de dados nos formatos BINÁRIO, GRIB, NetCDF e HDF-SDS.
