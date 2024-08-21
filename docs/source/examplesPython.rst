@@ -167,7 +167,7 @@ Recuperar Dados com recorte de área
    saz.dict['area']['minlon'] = 301.14
    saz.dict['area']['maxlon'] = 320.57
    # Requisição dos dados
-   f = sub.load(date='20240401', var='prec', product='mnth' ,field='anomalies')
+   f = saz.load(date='20240401', var='prec', product='mnth' ,field='anomalies')
    # Definir tamanho da figura
    fig = plt.figure(figsize=(10,8))
    # Setar figura unica
@@ -184,7 +184,7 @@ Recuperar Dados com recorte de área
    # Colocar Estados Brasil
    ax.add_feature(states, edgecolor='gray')
    # Plotar variavel
-   f.prec.plot()
+   f.prec.sel(time="2024-04-01").plot()
    plt.show()
 
 
