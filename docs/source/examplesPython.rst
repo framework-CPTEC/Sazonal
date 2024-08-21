@@ -54,7 +54,7 @@ Recuperar Dados do Modelos Numérico SubSazonal
   # Data Request / Data retrieval
   f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # Retorna um Xarray
+  # Xarray
   print(f)
   # <xarray.Dataset> Size: 594kB
   # Dimensions:  (lat: 192, time: 2, lon: 384)
@@ -80,31 +80,28 @@ Recuperar Dados e Salvar em NetCDF
 
 .. code-block:: console
 
-  # Importa a ferramenta
-  import subsaz.CPTEC_SUB as SUB
-  
-  # Inicializa o construtor
-  sub = SUB.model()
+  # Import the Library
+  import sazonal.CPTEC_SAZ as SAZ
 
-  # Data Condição Inicial (IC)
-  date = '20230104'
+  # Initialize the Constructorr
+  saz = SAZ.model()
 
-  # variavel
-  var = 'prec'
+  # Initial Condition Date
+  date = '20240401'
 
-  # produto
-  product = 'week'
+  # Variable
+  var = ['prec']
 
-  # campo
-  field = 'anomalies'
+  # Time Range
+  product = 'seas' 
 
-  # passo depende do produto escolhido
-  step = '01'
+  # Map Type
+  field = 'anomalies' 
 
-  # Requisição dos dados
-  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+  # Data Request / Data retrieval
+  f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # Salvar XArray em NetCDF
+  # XArray to NetCDF
   f.to_netcdf('arquivo.nc')
 
   quit()
