@@ -35,18 +35,25 @@ Recuperar Dados do Modelos Numérico SubSazonal
 
   # Import the Library
   import sazonal.CPTEC_SAZ as SAZ
+
   # Initialize the Constructorr
   saz = SAZ.model()
+
   # Initial Condition Date
   date = '20240401'
+
   # Variable
   var = ['prec']
+
   # Time Range
   product = 'seas' 
+
   # Map Type
   field = 'anomalies' 
+
   # Data Request / Data retrieval
   f = saz.load(date=date, var=var, product=product ,field=field) 
+
   # Retorna um Xarray
   print(f)
   # <xarray.Dataset> Size: 594kB
