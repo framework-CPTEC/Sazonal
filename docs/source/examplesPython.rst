@@ -9,74 +9,62 @@ Exemplos Python
 
   
 .. note::
-   **#### The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid) #####**
-   
-   **Forecast data available for reading.**
+  #### The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid) #####
 
-   2023-01-04 - 2023-01-11 - 2023-01-18 - 2023-01-25 - 2023-02-01
-   2023-02-08 - 2023-02-15 - 2023-02-22 - 2023-03-01 - 2023-03-08
-   2023-03-15 - 2023-03-22 - 2023-03-29 - 2023-04-05 - 2023-04-12
-   2023-04-19 - 2023-04-26 - 2023-05-03 - 2023-05-10 - 2023-05-17
-   2023-05-24 - 2023-05-31 - 2023-06-07 - 2023-06-14 - 2023-06-21
-   2023-06-28 - 2023-07-05 - 2023-07-12 - 2023-07-19 - 2023-07-26
-   2023-08-02 - 2023-08-09 - 2023-08-16 - 2023-08-23 - 2023-08-30
-   2023-09-06 - 2023-09-13 - 2023-09-20 - 2023-09-27 - 2023-10-04
-   2023-10-11 - 2023-10-18 - 2023-10-25 - 2023-11-01 - 2023-11-08
-   2023-11-15 - 2023-11-22 - 2023-11-29 - 2023-12-06 - 2023-12-13
-   2023-12-20 - 2023-12-27 - 2024-01-03 - 2024-01-10 - 2024-01-17
-   2024-01-24 - 2024-01-31 - 2024-02-07 - 2024-02-14 - 2024-02-21
-   
-   **Variables:** {'prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85',
-   'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 'cr20'}
-   
-   **Products:** {'week', 'fort', '3wks', 'mnth'}
-  
-   **Field:** {'anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals'}
-  
+--------------------
+Forecast data available for reading.
+
+2024-01-01 - 2024-02-01 - 2024-03-01 - 2024-04-01 - 2024-05-01
+2024-06-01 - 2024-07-01 - --------------------
+Variables: ['prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85', 'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 'cr20']
+--------------------
+Products: ['seas', 'mnth']
+--------------------
+Field: ['anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals']
+--------------------
   
 
 Recuperar Dados do Modelos Numérico SubSazonal
 ----------------------------------------------
 .. code-block:: console
 
-  # Importa a ferramenta
-  import subsaz.CPTEC_SUB as SUB
-  
-  # Inicializa o construtor
-  sub = SUB.model()
 
-  # Data Condição Inicial (IC)
-  date = '20230104'
+# Import the Library
+import sazonal.CPTEC_SAZ as SAZ
 
-  # variavel
-  var = 'prec'
+# Initialize the Constructorr
+saz = SAZ.model()
 
-  # produto
-  product = 'week'
+# Initial Condition Date
+date = '20240401'
 
-  # campo
-  field = 'anomalies'
+# Variable
+var = ['prec']
 
-  # passo depende do produto escolhido
-  step = '01'
+# Time Range
+product = 'seas' 
 
-  # Requisição dos dados
-  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+# Map Type
+field = 'anomalies' 
+
+# Data Request / Data retrieval
+f = saz.load(date=date, var=var, product=product ,field=field) 
 
   # Retorna um Xarray
   print(f)
-  # <xarray.Dataset> Size: 300kB
-  # Dimensions:  (time: 1, lat: 192, lon: 384)
-  # Coordinates:
-  #  * lat      (lat) float64 2kB -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
-  #  * lon      (lon) float64 3kB 0.0 0.9399 1.88 2.82 ... 357.2 358.1 359.1 360.0
-  #  * time     (time) datetime64[ns] 8B 2023-01-04
-  # Data variables:
-  #    prec     (time, lat, lon) float32 295kB -0.02726 -0.0294 ... 0.9935 0.9946
-  # Attributes:
-  #    center:   National Institute for Space Research - INPE
-  #    model:    The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid)
-
+# <xarray.Dataset> Size: 594kB
+# Dimensions:  (lat: 192, time: 2, lon: 384)
+# Coordinates:
+#  * lat      (lat) float64 2kB -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
+#  * time     (time) datetime64[ns] 16B 2024-04-01 2024-07-01
+#  * lon      (lon) float64 3kB -180.0 -179.1 -178.1 -177.2 ... 177.2 178.1 179.1
+# Data variables:
+#    prec     (time, lat, lon) float32 590kB 3.252 3.252 3.252 ... 1.045 1.045
+# Attributes:
+#    center:          National Institute for Space Research - INPE
+#    model:           The Brazilian Global Atmospheric Model V1.2 (TQ0126L042 ...
+#    initialization:  2024-04-01
+#    field:           Forecast Anomalies
   quit()
 
 Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
