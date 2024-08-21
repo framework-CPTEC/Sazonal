@@ -14,12 +14,12 @@ Instalação
   
 .. code-block:: console
 
-  conda install -c conda-forge  cptec-subsaz
+  conda install -c conda-forge  cptec-sazonal
 
 
 **Via pip**
   
 .. code-block:: console
 
-  pip install cptec-subsaz
+  pip install cptec-sazonal
   
