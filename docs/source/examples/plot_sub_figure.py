@@ -1,30 +1,27 @@
 # Importa a ferramenta
-import subsaz.CPTEC_SUB as SUB
+import sazonal.CPTEC_SAZ as SAZ
 import matplotlib.pyplot as plt
 
 # Inicializa o construtor
-sub = SUB.model()
+saz = SAZ.model()
 
 # Data Condição Inicial (IC)
-date = '20230104'
+date = '20240401'
 
-# variavel
-var = 'prec'
+# Variável
+var = ['prec']
 
-# produto
-product = 'week'
+# Produto
+product = 'seas'
 
-# campo
+# Campo
 field = 'anomalies'
 
-# passo depende do produto escolhido
-step = '01'
-
 # Requisição dos dados
-f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+f = saz.load(date=date, var=var, product=product ,field=field)
 
-# Plotar a figura com a variavel prec
-f.prec.plot()
+# Plotar a variável prec
+f.prec.sel(time="2024-04-01").plot()
 plt.show()
 
 quit()
