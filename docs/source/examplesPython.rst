@@ -153,21 +153,21 @@ Recuperar Dados com recorte de área
 
 .. code-block:: console
 
-   import subsaz.CPTEC_SUB as SUB
+   import sazonal.CPTEC_SAZ as SAZ
    import matplotlib.pyplot as plt
    import cartopy.crs as ccrs
    import cartopy.feature as cfeature
 
    # Inicializa o construtor
-   sub = SUB.model()
+   saz = SAZ.model()
    # Filtrar area definida
-   sub.dict['area']['reduce'] = True 
-   sub.dict['area']['minlat'] = -34.44
-   sub.dict['area']['maxlat'] = -21.43
-   sub.dict['area']['minlon'] = 301.14
-   sub.dict['area']['maxlon'] = 320.57
+   saz.dict['area']['reduce'] = True 
+   saz.dict['area']['minlat'] = -34.44
+   saz.dict['area']['maxlat'] = -21.43
+   saz.dict['area']['minlon'] = 301.14
+   saz.dict['area']['maxlon'] = 320.57
    # Requisição dos dados
-   f = sub.load(date='20230104', var='prec', step='01', product='week' ,field='anomalies')
+   f = sub.load(date='20240401', var='prec', product='mnth' ,field='anomalies')
    # Definir tamanho da figura
    fig = plt.figure(figsize=(10,8))
    # Setar figura unica
