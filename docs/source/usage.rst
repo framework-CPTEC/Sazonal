@@ -59,7 +59,7 @@ Arquivos de dados de previsão calibrados são gerados para valores totais de te
 Produto
 -------
 
-product = 'week'
+product = 'mnth'
 
 **Lista de produtos disponíveis:**
 
@@ -86,10 +86,8 @@ step = '01'
 
 A opção pode ser omitida e trará todos os tempos do produto.
 
-- week -> dado por semana (01, 02, 03 e 04)
-- fort -> dado por quinzena (14 dias), para as quinzenas (01 e 02)
-- 3wks -> dado médio de 21 dias ou acumulação (01)
-- mnth -> dado médio ou acúmulo de 30 dias (01)
+- seas -> dado médio de 3 meses ou acumulação (01 e 02)
+- mnth -> dado médio ou acúmulo de 30 dias (01, 02, 03 e 04)
 
 
 Exemplo de solicitação do Pedido
