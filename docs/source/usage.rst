@@ -4,7 +4,7 @@ Como Usar
 Import
 ------
 
-import subsaz.CPTEC_SUB as SUB
+import sazonal.CPTEC_SAZ as SAZ
 
 Inicialização
 -------------
@@ -12,7 +12,7 @@ Inicialização
 Ex. de Pedido
 Durante a inicialização do construtor informações sobre os dados são exibidas
 
-sub = SUB.model()
+saz = SAZ.model()
 
 
 Pedido
@@ -21,7 +21,7 @@ Pedido
 Data
 ----
 
-date= '20240214'
+date= '20240201'
 
 .. warning::
   Alterar a data para os valores exibidos na inicialização
@@ -63,11 +63,8 @@ product = 'week'
 
 **Lista de produtos disponíveis:**
 
-- week -> média ou acúmulo semanal (7 dias), para as semanas 01, 02, 03 e 04
-- fort -> média ou acúmulo quinzenal (14 dias), para as quinzenas 01 e 02
-- 3wks -> média de 21 dias ou acumulação
-- mnth -> média ou acúmulo de 30 dias
-
+- seas -> média ou acúmulo de 3 meses, para os períodos 01 e 02
+- mnth -> média ou acúmulo de 30 dias, para os meses 01, 02, 03 e 04
 
 Campo
 -----
@@ -98,6 +95,6 @@ A opção pode ser omitida e trará todos os tempos do produto.
 Exemplo de solicitação do Pedido
 --------------------------------
 
-f = sub.load(date='20240207', var='prec', product='week',field='anomalies')
+f = saz.load(date='20240201', var='prec', product='mnth',field='anomalies')
 
 
