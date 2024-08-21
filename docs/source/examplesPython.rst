@@ -114,31 +114,28 @@ Recuperar Dados e Plotar Figura
 .. code-block:: console
 
   # Importa a ferramenta
-  import subsaz.CPTEC_SUB as SUB
+  import sazonal.CPTEC_SAZ as SAZ
   import matplotlib.pyplot as plt
 
-  # Inicializa o construtor
-  sub = SUB.model()
+  # Initialize the Constructorr
+  saz = SAZ.model()
 
-  # Data Condição Inicial (IC)
-  date = '20230104'
+  # Initial Condition Date
+  date = '20240401'
 
-  # variavel
-  var = 'prec'
+  # Variable
+  var = ['prec']
 
-  # produto
-  product = 'week'
+  # Time Range
+  product = 'seas' 
 
-  # campo
-  field = 'anomalies'
+  # Map Type
+  field = 'anomalies' 
 
-  # passo depende do produto escolhido
-  step = '01'
+  # Data Request / Data retrieval
+  f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # Requisição dos dados
-  f = sub.load(date=date, var=var, step=step, product=product ,field=field)
-
-  # Plotar a figura com a variavel prec
+  # Plot prec
   f.prec.plot()
   plt.show()
 
