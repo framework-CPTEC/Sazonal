@@ -33,28 +33,28 @@ Recuperar Dados do Modelos Numérico SubSazonal
 ----------------------------------------------
 .. code-block:: console
 
-  # Import the Library
+  # Importa a biblioteca
   import sazonal.CPTEC_SAZ as SAZ
 
-  # Initialize the Constructorr
+  # Inicializa o construtor
   saz = SAZ.model()
 
-  # Initial Condition Date
+  # Data Condição Inicial (IC)
   date = '20240401'
 
-  # Variable
+  # Variável
   var = ['prec']
 
-  # Time Range
+  # Produto
   product = 'seas' 
 
-  # Map Type
+  # Campo
   field = 'anomalies' 
 
-  # Data Request / Data retrieval
+  # Requisição dos dados
   f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # Xarray
+  # Imprimir o Xarray
   print(f)
   # <xarray.Dataset> Size: 594kB
   # Dimensions:  (lat: 192, time: 2, lon: 384)
@@ -80,28 +80,28 @@ Recuperar Dados e Salvar em NetCDF
 
 .. code-block:: console
 
-  # Import the Library
+  # Importa a biblioteca
   import sazonal.CPTEC_SAZ as SAZ
 
-  # Initialize the Constructorr
+  # Inicializa o construtor
   saz = SAZ.model()
 
-  # Initial Condition Date
+  # Data Condição Inicial (IC)
   date = '20240401'
 
-  # Variable
+  # Variável
   var = ['prec']
 
-  # Time Range
+  # Produto
   product = 'seas' 
 
-  # Map Type
+  # Campo
   field = 'anomalies' 
 
-  # Data Request / Data retrieval
+  # Requisição dos dados
   f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # XArray to NetCDF
+  # Salvar o XArray para NetCDF
   f.to_netcdf('arquivo.nc')
 
   quit()
@@ -117,25 +117,25 @@ Recuperar Dados e Plotar Figura
   import sazonal.CPTEC_SAZ as SAZ
   import matplotlib.pyplot as plt
 
-  # Initialize the Constructorr
+  # Inicializa o construtor
   saz = SAZ.model()
 
-  # Initial Condition Date
+  # Data Condição Inicial (IC)
   date = '20240401'
 
-  # Variable
+  # Variável
   var = ['prec']
 
-  # Time Range
+  # Produto
   product = 'seas' 
 
-  # Map Type
+  # Campo
   field = 'anomalies' 
 
-  # Data Request / Data retrieval
+  # Requisição dos dados
   f = saz.load(date=date, var=var, product=product ,field=field) 
 
-  # Plot prec
+  # Plotar a variável prec
   f.prec.sel(time="2024-04-01").plot()
   plt.show()
 
