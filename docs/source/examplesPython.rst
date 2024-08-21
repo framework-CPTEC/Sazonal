@@ -10,16 +10,22 @@ Exemplos Python
   
 .. note::
   #### The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid) #####
+
   --------------------
   Forecast data available for reading.
   2024-01-01 - 2024-02-01 - 2024-03-01 - 2024-04-01 - 2024-05-01
-  2024-06-01 - 2024-07-01 - --------------------
+  2024-06-01 - 2024-07-01 - 
+
+  --------------------
   Variables: ['prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85', 'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 
   'cr20']
+
   --------------------
   Products: ['seas', 'mnth']
+
   --------------------
   Field: ['anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals']
+
   --------------------
   
 
