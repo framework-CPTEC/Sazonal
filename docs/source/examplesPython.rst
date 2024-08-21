@@ -10,61 +10,52 @@ Exemplos Python
   
 .. note::
   #### The Brazilian Global Atmospheric Model (TQ0666L064 / Hybrid) #####
-
---------------------
-Forecast data available for reading.
-
-2024-01-01 - 2024-02-01 - 2024-03-01 - 2024-04-01 - 2024-05-01
-2024-06-01 - 2024-07-01 - --------------------
-Variables: ['prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85', 'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 'cr20']
---------------------
-Products: ['seas', 'mnth']
---------------------
-Field: ['anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals']
---------------------
+  --------------------
+  Forecast data available for reading.
+  2024-01-01 - 2024-02-01 - 2024-03-01 - 2024-04-01 - 2024-05-01
+  2024-06-01 - 2024-07-01 - --------------------
+  Variables: ['prec', 'prec_ca', 't2mt', 't2mt_ca', 'psnm', 'role', 'tp85', 'zg50', 'uv85', 'uv20', 'vv85', 'vv20', 'cr85', 
+  'cr20']
+  --------------------
+  Products: ['seas', 'mnth']
+  --------------------
+  Field: ['anomalies', 'prob_positve_anomaly', 'prob_terciles', 'totals']
+  --------------------
   
 
 Recuperar Dados do Modelos Numérico SubSazonal
 ----------------------------------------------
 .. code-block:: console
 
-
-# Import the Library
-import sazonal.CPTEC_SAZ as SAZ
-
-# Initialize the Constructorr
-saz = SAZ.model()
-
-# Initial Condition Date
-date = '20240401'
-
-# Variable
-var = ['prec']
-
-# Time Range
-product = 'seas' 
-
-# Map Type
-field = 'anomalies' 
-
-# Data Request / Data retrieval
-f = saz.load(date=date, var=var, product=product ,field=field) 
-
+  # Import the Library
+  import sazonal.CPTEC_SAZ as SAZ
+  # Initialize the Constructorr
+  saz = SAZ.model()
+  # Initial Condition Date
+  date = '20240401'
+  # Variable
+  var = ['prec']
+  # Time Range
+  product = 'seas' 
+  # Map Type
+  field = 'anomalies' 
+  # Data Request / Data retrieval
+  f = saz.load(date=date, var=var, product=product ,field=field) 
   # Retorna um Xarray
   print(f)
-# <xarray.Dataset> Size: 594kB
-# Dimensions:  (lat: 192, time: 2, lon: 384)
-# Coordinates:
-#  * lat      (lat) float64 2kB -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
-#  * time     (time) datetime64[ns] 16B 2024-04-01 2024-07-01
-#  * lon      (lon) float64 3kB -180.0 -179.1 -178.1 -177.2 ... 177.2 178.1 179.1
-# Data variables:
-#    prec     (time, lat, lon) float32 590kB 3.252 3.252 3.252 ... 1.045 1.045
-# Attributes:
-#    center:          National Institute for Space Research - INPE
-#    model:           The Brazilian Global Atmospheric Model V1.2 (TQ0126L042 ...
-#    initialization:  2024-04-01
-#    field:           Forecast Anomalies
+  # <xarray.Dataset> Size: 594kB
+  # Dimensions:  (lat: 192, time: 2, lon: 384)
+  # Coordinates:
+  #  * lat      (lat) float64 2kB -89.28 -88.36 -87.42 -86.49 ... 87.42 88.36 89.28
+  #  * time     (time) datetime64[ns] 16B 2024-04-01 2024-07-01
+  #  * lon      (lon) float64 3kB -180.0 -179.1 -178.1 -177.2 ... 177.2 178.1 179.1
+  # Data variables:
+  #    prec     (time, lat, lon) float32 590kB 3.252 3.252 3.252 ... 1.045 1.045
+  # Attributes:
+  #    center:          National Institute for Space Research - INPE
+  #    model:           The Brazilian Global Atmospheric Model V1.2 (TQ0126L042 ...
+  #    initialization:  2024-04-01
+  #    field:           Forecast Anomalies
   quit()
 
 Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
