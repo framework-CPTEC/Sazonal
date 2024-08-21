@@ -136,7 +136,7 @@ Recuperar Dados e Plotar Figura
   f = saz.load(date=date, var=var, product=product ,field=field) 
 
   # Plot prec
-  f.prec.plot()
+  f.prec.sel(time="2024-04-01").plot()
   plt.show()
 
   quit()
