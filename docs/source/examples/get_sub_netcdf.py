@@ -1,28 +1,25 @@
-# Importa a ferramenta
-import subsaz.CPTEC_SUB as SUB
+# Importa a biblioteca
+import sazonal.CPTEC_SAZ as SAZ
 
 # Inicializa o construtor
-sub = SUB.model()
+saz = SAZ.model()
 
 # Data Condição Inicial (IC)
-date = '20230104'
+date = '20240401'
 
-# variavel
-var = 'prec'
+# Variável
+var = ['prec']
 
-# produto
-product = 'week'
+# Produto
+product = 'seas'
 
-# campo
+# Campo
 field = 'anomalies'
 
-# passo depende do produto escolhido
-step = '01'
-
 # Requisição dos dados
-f = sub.load(date=date, var=var, step=step, product=product ,field=field)
+f = saz.load(date=date, var=var, product=product ,field=field)
 
-# Salvar XArray em NetCDF
-f.to_netcdf('sub_202301104.nc')
+# Salvar o XArray para NetCDF
+f.to_netcdf('arquivo.nc')
 
 quit()
