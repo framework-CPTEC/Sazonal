@@ -5,7 +5,7 @@ Exemplos Python
    Alterar para os valores exibidos na inicialização.
 
    Inicialização comando:
-   sub = SUB.model()
+   saz = SAZ.model()
 
   
 .. note::
