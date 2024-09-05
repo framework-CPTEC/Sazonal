@@ -89,30 +89,6 @@ A opção pode ser omitida e trará todos os tempos do produto.
 - seas -> dado médio de 3 meses ou acumulação (01 e 02)
 - mnth -> dado médio ou acúmulo de 30 dias (01, 02, 03 e 04)
 
-A regular cell:
-
-Location
---------
-
-Documentation source files should be contained in a folder named ``docs`` located at the root of the project.
-Images and other static assets should be located in ``docs/_static``.
-
-reST directives must refer to files either relative to the source file or absolute from the top source directory.
-For example, in ``docs/narr/source.rst``, you could refer to a file in a different directory as either:
-
-.. code-block:: rst
-
-    .. include:: ../diff-dir/diff-source.rst
-
-or:
-
-.. code-block:: rst
-
-    .. include:: /diff-dir/diff-source.rst.
-
-
-.. _dsg-file-naming:
-
 
 Exemplo de solicitação do Pedido
 --------------------------------
