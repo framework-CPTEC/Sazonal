@@ -89,6 +89,13 @@ A opção pode ser omitida e trará todos os tempos do produto.
 - seas -> dado médio de 3 meses ou acumulação (01 e 02)
 - mnth -> dado médio ou acúmulo de 30 dias (01, 02, 03 e 04)
 
+A regular cell:
+
+```python
+print("hi")
+```
+
+
 
 Exemplo de solicitação do Pedido
 --------------------------------
