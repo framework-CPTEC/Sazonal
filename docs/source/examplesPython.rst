@@ -69,7 +69,7 @@ Recuperar Dados do Modelos Numérico SubSazonal
   #    model:           The Brazilian Global Atmospheric Model V1.2 (TQ0126L042 ...
   #    initialization:  2024-04-01
   #    field:           Forecast Anomalies
-  quit()
+ 
 
 Download :download:`get_data_sub_oper.py <examples/get_data_sub_oper.py>`.
 
@@ -104,7 +104,7 @@ Recuperar Dados e Salvar em NetCDF
   # Salvar o XArray para NetCDF
   f.to_netcdf('arquivo.nc')
 
-  quit()
+ 
 
 Download :download:`get_sub_netcdf.py <examples/get_sub_netcdf.py>`.
 
@@ -139,7 +139,7 @@ Recuperar Dados e Plotar Figura
   f.prec.sel(time="2024-04-01").plot()
   plt.show()
 
-  quit()
+  
 
 Download :download:`plot_sub_figure.py <examples/plot_sub_figure.py>`.
 
